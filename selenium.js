@@ -7,6 +7,10 @@ async function openBrowser() {
     try {
         // Navigate to google.com
         await driver.get('https://www.google.com');
+
+        // Maximize the browser window
+        await driver.manage().window().maximize();
+
     } finally {
         // Close the browser after a delay
         setTimeout(() => driver.quit(), 5000);
